@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	
+	<property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} --- %-60.60logger{59} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+	<property name="CONSOLE_LOG_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}){magenta} %clr(---) %clr(%-60.60logger{59}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+	
+	<property name="LOG_PATH" value="${LOG_PATH:-logs}"/> 
+	<property name="LOG_FILE" value="${LOG_PATH}/shotservice.log"/>
+
+	<springProperty scope="context" name="totalSizeCap" source="logging.total-size-cap"
+		defaultValue="5GB"/>
+
+	<!-- Include default console-appender definition.
+	     Don't move this include directive above the CONSOLE_LOG_PATTERN definition. Otherwise
+	     the default log pattern from the console-appender will be taken.  -->
+	<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+	<!-- Only activate file logging when not running locally on a developers machine -->
+	<springProfile name="!local">
+		<appender name="FILE"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<encoder>
+				<pattern>${FILE_LOG_PATTERN}</pattern>
+				<charset>utf8</charset>
+			</encoder>
+			<file>${LOG_FILE}</file>
+			<rollingPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<!-- rollover daily -->
+				<fileNamePattern>${LOG_PATH}/shotservice-%d{yyyy-MM-dd}.%i.log
+				</fileNamePattern>
+				<!-- each file should be at most 100MB, keep 12 days worth of history, 
+					but at most ${totalSizeCap} -->
+				<maxFileSize>100MB</maxFileSize>
+				<maxHistory>12</maxHistory>
+				<totalSizeCap>${totalSizeCap}</totalSizeCap>
+			</rollingPolicy>
+		</appender>
+	</springProfile>
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+		<springProfile name="!local">
+			<appender-ref ref="FILE" />
+		</springProfile>
+	</root>
+</configuration>

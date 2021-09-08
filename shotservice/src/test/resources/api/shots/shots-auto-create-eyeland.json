@@ -1,0 +1,86 @@
+[
+  {
+    "inPoint": 1,
+    "outPoint": 142,
+    "shotType": "MS",
+    "cameraMovement": null
+  },
+  {
+    "inPoint": 143,
+    "outPoint": 463,
+    "shotType": "CU",
+    "cameraMovement": "TILT"
+  },
+  {
+    "inPoint": 464,
+    "outPoint": 531,
+    "shotType": "ELS",
+    "cameraMovement": "PAN"
+  },
+  {
+    "inPoint": 532,
+    "outPoint": 778,
+    "shotType": "NA",
+    "cameraMovement": "TILT"
+  },
+  {
+    "inPoint": 779,
+    "outPoint": 1172,
+    "shotType": null,
+    "cameraMovement": "PAN"
+  },
+  {
+    "inPoint": 1173,
+    "outPoint": 1345,
+    "shotType": "LS",
+    "cameraMovement": null
+  },
+  {
+    "inPoint": 1346,
+    "outPoint": 1697,
+    "shotType": null,
+    "cameraMovement": "TILT"
+  },
+  {
+    "inPoint": 1698,
+    "outPoint": 1795,
+    "shotType": "CU",
+    "cameraMovement": "PAN"
+  },
+  {
+    "inPoint": 1796,
+    "outPoint": 2072,
+    "shotType": "MS",
+    "cameraMovement": "TRACK"
+  },
+  {
+    "inPoint": 2073,
+    "outPoint": 2096,
+    "shotType": "NA",
+    "cameraMovement": "TILT"
+  },
+  {
+    "inPoint": 2097,
+    "outPoint": 2299,
+    "shotType": "ELS",
+    "cameraMovement": "NA"
+  },
+  {
+    "inPoint": 2300,
+    "outPoint": 2649,
+    "shotType": "MS",
+    "cameraMovement": "TRACK"
+  },
+  {
+    "inPoint": 2650,
+    "outPoint": 2778,
+    "shotType": "CU",
+    "cameraMovement": null
+  },
+  {
+    "inPoint": 2779,
+    "outPoint": 3000,
+    "shotType": "ELS",
+    "cameraMovement": "NA"
+  }
+]

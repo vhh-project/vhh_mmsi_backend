@@ -1,0 +1,64 @@
+{
+  "intrinsic_fields": {
+    "type_id": "23",
+    "idno": "ac-00001"
+  },
+  "preferred_labels": [
+    {
+      "locale": "en_US",
+      "name": "Die Todesmühlen"
+    }
+  ],
+  "attributes": {
+    "vhh_Identifier": [
+      {
+        "locale": "en_US",
+        "IdentifierScheme": "DIF",
+        "IdentifierValue": "F40838"
+      },
+      {
+        "locale": "en_US",
+        "IdentifierScheme": "CG",
+        "IdentifierValue": "CBW007164"
+      },
+      {
+        "locale": "en_US",
+        "IdentifierScheme": "CH",
+        "IdentifierValue": "FBW000061"
+      }
+    ],
+    "vhh_DescriptionLevel": [
+      {
+        "locale": "en_US",
+        "vhh_DescriptionLevel": 222
+      }
+    ],
+    "vhh_Note": [
+      {
+        "locale": "en_US",
+        "vhh_NoteText": "In drei Versionen (deutsch, englisch, jiddisch) produziert.",
+        "vhh_NoteReference" : "general"
+      }
+    ],
+    "vhh_CountryOfReference": [
+      {
+        "locale": "en_US",
+        "Country": 241,
+        "Reference": "production"
+      },
+      {
+        "locale": "en_US",
+        "Country": 440,
+        "Reference": "production"
+      }
+    ],
+    "vhh_DateOfReference": [
+      {
+        "locale": "en_US",
+        "Value2": "1945",
+        "Value2_sort_": "1945.01010000000000000000\/1945.12312359590000000000",
+        "Reference": "production"
+      }
+    ]
+  }
+}

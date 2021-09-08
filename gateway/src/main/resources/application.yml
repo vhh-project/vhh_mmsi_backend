@@ -1,0 +1,69 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: keycloak
+            client-id: local-dev
+            #client-secret: gateway
+            authorization-grant-type: authorization_code
+            redirectUriTemplate: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope: openid,profile,email
+        provider:
+          keycloak:
+            issuer-uri: https://sso.vhh-dev.max-recall.com/auth/realms/vhh
+
+  cloud:
+    gateway:
+      routes:
+      - id: ca_api_route
+        uri: http://ca
+        predicates:
+        - Path=/api/ca/service/**
+        filters:
+        - StripPrefix=3
+        - PrefixPath=/providence/service.php
+        # Authentication to the CA API is taking place in this filter.
+        # For details look at the implementation.
+        - CAAuth
+      - id: ca_media_route
+        uri: http://ca
+        predicates:
+        - Path=/api/ca/media/**
+        filters:
+        - StripPrefix=3
+        - PrefixPath=/providence/media
+      - id: shotservice_route
+        uri: http://shotservice:8080
+        predicates:
+        - Path=/api/shotservice/**
+        filters:
+        - StripPrefix=2
+      - id: tba_route
+        uri: https://import-es.vhh-dev.max-recall.com:443
+        predicates:
+        - Path=/api/annotations/tba/**
+        filters:
+        - StripPrefix=3
+        - PrefixPath=/tba
+      - id: bb_route
+        uri: https://import-es.vhh-dev.max-recall.com:443
+        predicates:
+        - Path=/api/annotations/bb/**
+        filters:
+        - StripPrefix=3
+        - PrefixPath=/bb
+        # UI route 
+        #
+        # Map it via the /mmsi path since it is also mapped via this path 
+        # from the primary virtual host www.vhh-*.max-recall.com/mmsi
+        #
+        # If mapping it to e.g. /ui the redirect upon authentication will 
+        # incorrectly go to www.vhh-*.max-recall.com/ui 
+      - id: ui_route
+        uri: http://ui:80
+        predicates:
+        - Path=/mmsi/**
+        filters:
+        - StripPrefix=1

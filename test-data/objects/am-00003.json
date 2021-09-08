@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "intrinsic_fields": {
+    "type_id": "24",
+    "idno": "am-00003"
+  },
+  "preferred_labels": [
+    {
+      "locale": "en_US",
+      "name": "Die Todesmühlen (Archivfassung)"
+    }
+  ],
+  "attributes": {
+    "vhh_Duration": [
+      {
+        "locale": "none",
+        "vhh_Duration": "0:23:00"
+      }
+    ],
+    "vhh_Identifier": [
+      {
+        "locale": "en_US",
+        "IdentifierScheme": "DIF-UID",
+        "IdentifierValue": "8B72DA3120F446F18BB24A8EEFFBFE00"
+      }
+    ],
+    "vhh_Note": [
+      {
+        "locale": "en_US",
+        "vhh_NoteText": "TODO: 35mm",
+        "vhh_NoteReference" : "general"
+      }
+    ],
+    "vhh_Extent": [
+      {
+        "locale": "en_US",
+        "ext_Value": "620",
+        "ext_Unit": 366
+      }
+    ]
+  }
+}

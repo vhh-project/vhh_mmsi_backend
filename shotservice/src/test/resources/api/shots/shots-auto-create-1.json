@@ -1,0 +1,22 @@
+[
+ {
+   "inPoint" : 1,
+   "outPoint": 100
+ },
+ {
+   "inPoint" : 101,
+   "outPoint": 200,
+   "shotType" : "ELS"
+ },
+ {
+   "inPoint" : 201,
+   "outPoint": 300,
+   "cameraMovement" : "PAN"
+ },
+ {
+   "inPoint" : 301,
+   "outPoint": 400,
+   "shotType" : "MS",
+   "cameraMovement" : "TILT"
+ }
+]

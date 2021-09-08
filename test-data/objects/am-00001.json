@@ -1,0 +1,83 @@
+
+{
+  "intrinsic_fields": {
+    "type_id": "24",
+    "idno": "am-00001"
+  },
+  "preferred_labels": [
+    {
+      "locale": "en_US",
+      "name": "Die Todesmühlen"
+    }
+  ],
+  "attributes": {
+    "vhh_Duration": [
+      {
+        "locale": "none",
+        "vhh_Duration": "0:23:00"
+      }
+    ],
+    "vhh_Identifier": [
+      {
+        "locale": "en_US",
+        "IdentifierScheme": "DIF-UID",
+        "IdentifierValue": "8D825553CF9F4CF7AFB92217FD61AC4E"
+      }
+    ],
+    "vhh_Title": [
+      {
+        "locale": "en_US",
+        "Language": 156,
+        "TitleText": "Die Todesmühlen",
+        "TemporalScope": "1945",
+        "TemporalScope_sort_": "1945.01010000000000000000\/1945.12312359590000000000",
+        "TitleRelationship": 220
+      },
+      {
+        "locale": "en_US",
+        "Language": 154,
+        "TitleText": "Death Mills",
+        "TitleRelationship": 225
+      },
+      {
+        "locale": "en_US",
+        "Language": 154,
+        "TitleText": "Mills of Death",
+        "TitleRelationship": 225
+      },
+      {
+        "locale": "en_US",
+        "Language": 439,
+        "TitleText": "Di toit milen",
+        "TitleRelationship": 225
+      }
+    ],
+    "vhh_AspectRatio": [
+      {
+        "locale": "none",
+        "vhh_AspectRatio": 267
+      }
+    ],
+    "vhh_Sound": [
+      {
+        "locale": "en_US",
+        "snd_HasSound": 341,
+        "snd_RecordSystem": 343
+      }
+    ],
+    "vhh_Colour": [
+      {
+        "locale": "en_US",
+        "col_HasColor": 343,
+        "col_Chromatism": 293
+      }
+    ],
+    "vhh_Extent": [
+      {
+        "locale": "en_US",
+        "ext_Value": "630",
+        "ext_Unit": 366
+      }
+    ]
+  }
+}
